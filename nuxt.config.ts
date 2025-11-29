@@ -8,7 +8,13 @@ export default defineNuxtConfig({
       pages: {
         routes: {
           include: ["/*"],
-          exclude: []
+          exclude: [
+            "/_nuxt/*",
+            "/assets/*",
+            "/bima-logo.png",
+            "/favicon.ico",
+            "/robots.txt"
+          ]
         }
       }
     }
