@@ -4,6 +4,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
     preset: "cloudflare-pages",
+
+    // 🚫 Disable prerender route fingerprints
+    prerender: {
+      crawlLinks: false,
+      routes: []
+    },
+
+    // 🚫 Disable route rule generation
+    routeRules: {},
+
     cloudflare: {
       pages: {
         routes: {
