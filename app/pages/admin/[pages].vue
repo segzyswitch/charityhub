@@ -13,7 +13,7 @@ const router = useRouter();
 const route = useRoute();
 
 // redirect to login if not logged in
-// if (!user.value) router.push('/admin');
+if (!user.value) router.push('/admin');
 
 // page route
 const slug = route.params.pages;
