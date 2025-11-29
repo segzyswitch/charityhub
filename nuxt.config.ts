@@ -1,20 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,   // <-- REQUIRED for Cloudflare Pages SSR
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   nitro: {
     preset: "cloudflare-pages",
-
-    // 🚫 Disable prerender route fingerprints
-    prerender: {
-      crawlLinks: false,
-      routes: []
-    },
-
-    // 🚫 Disable route rule generation
-    routeRules: {},
-
     cloudflare: {
       pages: {
         routes: {
