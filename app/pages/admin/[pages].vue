@@ -337,7 +337,9 @@ onMounted( () => {
 		<div class="row pb-4">
 			<div class="col-sm-3 ps-0 d-none d-sm-block">
 				<div class="bg-dark vh-100 text-light position-fixed start-0 top-0 col-3 p-0">
-				<a class="navbar-brand d-inline-block m-2 mb-3" href="#" style="position:relative;top:20px;padding:5px 0;"><PageLogo /></a>
+				<a class="navbar-brand d-inline-block m-2 mb-3 px-2" href="#">
+					<img src="@/assets/img/logo.png" style="filter: invert(100%);" height="50" alt="">
+				</a>
 
 					<div class="w-100 sidenav pt-5">
 						<sidenav :Logout="Logout" />
