@@ -2,6 +2,17 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  nitro: {
+    preset: "cloudflare-pages",
+    cloudflare: {
+      pages: {
+        routes: {
+          include: [],
+          exclude: []
+        }
+      }
+    }
+  },
   app: {
     head: {
       title: 'Charity Hub - Online Charity & Fundraising Platform',
