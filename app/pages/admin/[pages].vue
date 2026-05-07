@@ -181,7 +181,7 @@ async function loadAll() {
 	);
 	Contestants.value = constestSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 	// fetch payment methods
-	const paymentSnapshot = await getDocs(collection($db, "payment_methods"));
+	const paymentSnapshot = await getDocs(collection($db, "charity_payment_methods"));
 	paymentMethods.value = paymentSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 	// fetch votes
 	const donationSnapshot = await getDocs(

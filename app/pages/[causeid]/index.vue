@@ -24,7 +24,7 @@ onMounted(async () => {
 	Causes.value = causeSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 	loadReq.value = false;
 	// fetch payment methods
-	const paymentSnapshot = await getDocs(collection($db, "payment_methods"));
+	const paymentSnapshot = await getDocs(collection($db, "charity_payment_methods"));
 	payment_methods.value = paymentSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 	// console.log(payment_methods.value);
 });
