@@ -203,11 +203,11 @@ async function makeDonation() {
 						<form @submit.prevent="activePage='payment'" v-if="!activePage">
 							<h4 class="mb-4">Choose donation amount</h4>
 							<div class="mb-5">
-								<div style="display:flex;gap:10px;">
-									<div class="w-100 price-btn" v-for="(rates, idx) in votePricing" :key="idx">
+								<div style="display:flex;gap:10px;flex-wrap: wrap;">
+									<div class="w-100 price-btn" style="flex: 0 0 calc(25% - 25px);" v-for="(rates, idx) in votePricing" :key="idx">
 										<button type="button" @click="makeVote(rates)" class="btn border w-100" :class="{'active': manualAmount==rates}">${{rates}}</button>
 									</div>
-									<div class="w-100 price-btn">
+									<div class="w-100 price-btn" style="flex: 0 0 calc(25% - 25px);">
 										<button type="button" @click="makeVote('manual')" class="btn border w-100" :class="{'active': !payAuto}">Other</button>
 									</div>
 								</div>
@@ -251,7 +251,7 @@ async function makeDonation() {
 									<div class="col-md-12 pt-3" v-for="(method, idx) in payment_methods" :key="idx">
 										<button type="button" @click="selectMethod(method)" class="btn w-100"
 											:class="{'bg-primary text-light': selectedMethod?.name==method?.name}"
-											style="display:flex;">
+											style="display:flex;max-width:100%;white-space: normal; word-break: break-word;">
 											<img :src="method?.icon" class="my-auto py-1"
 												:alt="method?.name" width="45"
 												style="padding:4px 0;"
